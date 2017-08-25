@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<!-- saved from url=(0109)file:///F:/%E5%89%8D%E7%AB%AF%E7%BB%83%E4%B9%A0/%E6%95%B4%E5%90%88/%E5%8F%A4%E7%AD%9D+%E7%B2%BD%E5%AD%90.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Task6</title>
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		body{
+			width: 980px;
+			margin-right:auto;
+			margin-left: auto;
+			padding:0;
+			background: url(../背景2.jpg) repeat-y center top;
+		}
+		#Container{
+			height: 1386px;
+			width:892px;
+			margin:0 auto;      /*左右居中*/
+			
+		}
+		
+		.url{                       /*前面不能加前缀啊，就是父级！！*/
+			height:61px;
+			width:110px;
+			position:relative;
+			/*top:0px;
+			left:0px;*/                 /*默认就是左上角*/
+			background-color: red;
+			
+		}
+		 .url p{                 /*好奇怪，在header前加“#”就不显示了*/
+			font-family: 黑体；
+			position:absolute;
+			font-size:12px;
+			bottom: 2px;
+			padding-top:46px;    /*本来不用加，但总下不去，就在浏览器中调的*/
+			color: #fff;
+		}
+		#header{                     
+			position:relative;
+			width: 892px;               /*实际上整个header的内容长度成了980-44*2=892*/
+			height: 63px;
+			padding:0;
+			top:0px;
+			left:0px;
+		}
+		 .line{
+			width: 892px;
+			height: 2px;
+			position: absolute;
+			border-color: #938e8c solid;
+			bottom: 0px;
+			
+		}
+		.date{
+			position: absolute;
+			right:100px;
+			bottom:2px;
+			font-family: 黑体；
+			font-size:12px;
+			color: #d45d5c;
+		}
+		
+		#content #top-fig{
+			width:641px;
+			height: 301px;
+			position: absolute;
+		}
+		#top{
+			position: relative;
+			width: 892px;
+			height: 301px;
+			margin:20px 0;
+			}
+		#top-fig .top-fig-l{
+			position: absolute;
+			top:0px;
+			left:0px;
+			width: 191px;
+			height: 301px;
+			background:#72A664; 
+			opacity: 0.5;            /* 不透明度，1为完全不透明 */
+		}
+		#top-fig .top-fig-r{
+			position: absolute;
+			top:0px;
+			right:0px;
+			width: 191px;
+			height: 301px;
+			background:#E1ABC3; 
+			opacity: 0.5;            /* 不透明度，1为完全不透明 */
+		}
+		#aside{
+			position: absolute;
+			right: 0px;
+			width:203px;
+		}
+		#aside hr{
+			border: 2px #cc8091 solid;
+		}
+		#aside h2{
+			font-size: 24px; 
+			color:#000000;
+			font-family:'微软雅黑';
+			text-decoration: underline;
+		}
+		#aside span{
+			font-size: 12px;
+			color:#676767;
+			font-family:'楷体'；
+			margin:10px;
+		}
+		#aside>p{
+			font-size: 116px;
+			font-style: italic;
+			color:#75b86b;
+			/*font-style:italic 116px;*/    /*简写需要有顺序*/
+			font-family: ' Microsoft Yahei';
+			text-decoration: underline;
+		}
+		#aside .down{
+			color:#cc8091;
+			font-family: 'Microsoft Yahei';
+			position: relative;
+			height: 55px;
+		}
+		.down .mark1{
+			font-size:55px;
+			position: absolute;
+		}
+		.down .mark2{
+			font-size:21px;
+			position: absolute;
+			bottom: 20px;
+			left:80px;
+		}
+		.down .mark3{
+			font-size:12px;
+			position: absolute;
+			bottom:0px;
+			left:80px;
+		}
+		#middle{
+			position: relative;
+			width:641px;
+			margin-bottom: 20px;
+		}
+		h3{
+			box-shadow:-20px 5px 20px 3px #888; }        /*阴影效果*/
+		#middle div{
+			float:left;
+			
+		
+		}
+		#bottom{
+			clear:both;}
+		#what{
+			
+			width: 40%;
+			
+		}
+		#what h3{
+			font-size: 16px;
+			font-weight: bold;
+			font-style:italic;
+			font-family: 'Microsoft Yahei';
+			color: #418c59;
+		}
+		#when{
+			
+			width: 30%;
+			
+		}
+		#when h3{
+			font-size: 16px;
+			font-weight: bold;
+			font-style:italic;
+			font-family: 'Microsoft Yahei';
+			color: #d2994f;
+		}
+		#how{
+			
+			width: 30%;
+			
+		}
+		#how h3{
+			font-size: 16px;
+			font-weight: bold;
+			font-style:italic;
+			font-family: 'Microsoft Yahei';
+			color: #cc7680;
+		}
+		#middle p{
+			font-size: 12px;
+			color: #231815;
+			font-family: 'Microsoft Yahei';
+			margin: 16px;
+			opacity: 0.7;
+		}
+		#bottom{
+			bottom: 30px;
+		}
+		#bottom #bottom-left{
+			float:left;
+			width:415px;
+			top:0px;
+			left:0px;
+		}
+		
+		.left-title .English{
+			/*position: absolute;*/
+			font-size: 42px;
+			font-family: "SimHei";
+			font-weight:bold;
+			color:#11456b;
+			margin:16px;
+		}
+		.left-title .Chinese{
+			/*position: absolute;*/
+			font-size: 33px;
+			font-family: "SimHei";
+			font-weight:bold;
+			color:#11456b;
+		}
+		.left-title p span {
+			font-size: 72px;
+			font-family: "SimHei";
+			font-weight:bold;
+			font-style:italic;
+			color:#f5e327;
+		}
+		.left-title .underline{
+			border:2px #11456b solid; 
+			margin-bottom: 20px;
+		}
+		p.text{
+			font-size:12px;
+			font-family: "宋体";             /*注意分号别写成冒号*/
+			color:#767777;
+			margin-bottom: 16px;
+		}
+		p .text span{
+			font-size: 70px;
+			font-family: "Microsoft Yahei";
+			color:#f5e327;
+		}
+		#bottom-left .picture{
+			float:right;
+			bottom:50px;
+			
+		}
+		#bottom-fig{
+			float:right;        /*先用float,能把相对定位留到后续用*/
+			margin-top:90px;
+			width:458px;
+			height: 275px;
+			position: relative;            /*float和relative可以共存*/
+		}
+		#bottom-fig .mark{                 /*拼写要正确，细心！*/
+			position: absolute;
+			bottom:0px;
+			width:458px;
+			height: 61px;
+			background:black;
+			background-color:#F66;
+			opacity:0.5;
+		}
+		.mark .describe .des_one{
+			font-size: 26px;
+			font-family: "Microsoft Yahei";
+			color:#39F;
+		}
+		.mark .describe .des_two{
+			color:#FF0;
+			font-family: "Microsoft Yahei";
+			font-size:14px;
+			font-style: italic;
+			letter-spacing: 140%;
+		}
+		#bottom-right{
+			float: right;
+			position: relative;
+			width:459px;
+			height: 318px;
+			background-color: #eeedd6;
+			margin-top:50px;
+		}
+		#bottom-right>p{
+			color: #5a5b5b;
+			font-family: "宋体";
+			font-size:16px;
+			font-style: italic;
+			line-height:200%;   
+			margin-top:20px;           
+			margin-left:30px;             /*左对齐*/
+
+		}
+		#bottom-right p .words{
+			color: #5a5b5b;
+			font-family: "宋体";
+			font-size:12px;
+			position: absolute;
+			right:3px;
+			font-style: italic;
+		}
+		#bottom-right p span .triangle{                /*绘制三角形*/
+			 width: 0;
+			 height: 0;
+			 border-left:5px solid transparent;
+			 border-right: 5px solid transparent;
+			 border-bottom: 10px solid #10456b;
+			 display: inline-block;
+		}
+		#bottom-right .rectangle{
+			position: absolute;
+			width:235px;
+			height: 160px;
+			bottom:0px;
+			left:0px;
+			background-color: #3CF;
+		}
+		.rectangle span{
+			float:left;
+			margin-left:20px;
+			margin-top:30px;
+			font-size:80px;
+			color:white;
+		}
+		.rectangle .line{
+			height:86px;
+			float:right;                        /*不造为啥浮不到左边*/
+			border-left:2px solid #ffffff;             /*就是那条白线*/
+			margin-top:35px;
+			width: 160px;
+			margin-left:80px;
+		}
+		.line>p{
+			font-size:12px;
+			color: #ffffff;
+			font-family: "黑体"；
+			margin-top:6px;
+		}
+		.line .bigger {
+			font-size:21px;
+			color: #ffffff;
+			font-family: "黑体"；
+			font-style:italic;
+		}
+		#bottom-right .verse{
+			position: absolute;
+			right:0px;
+			bottom:40px;
+		}
+		#bottom-right>p:first-letter{      /*没显示出来，首字母的设置*/
+			font-weight: bold;
+			color:red;
+		}
+		.verse p{
+			font-size:14px;
+			color:#5a5b5b;
+			font-family: "黑体"；
+			font-style:italic;
+			margin-top:16px;
+		}
+		.verse .mark_one{
+			color:blue;
+			float:left;
+			font-size:20px;
+		}
+		.verse .mark_two{
+			color:blue;
+			float:right;
+			font-size:20px;
+		}
+		#footer{
+			clear:both;
+			width: 892px;
+			height: 59px;
+			border-top: 1px solid #938e8c;
+		}
+		#footer .info{
+			float: right; 
+			font: 12px "黑体"; 
+			color: #d45d5c; 
+		}
+	</style>
+</head>
+<body>
+	<div id="Container" style="
+    /* margin-left: 20px; */
+    /* margin-right: 20px; */
+">             <!-- 与body不同，包裹住所有内容 -->
+		<div id="header">            <!-- 直接用header标签也可，与div结合也可 -->
+			<div class="url">
+				<p>ife.baidu.com</p>
+			</div>
+			<hr class="line">          <!-- hr标签是创建水平线 -->
+			<div class="date">2016.03</div>
+		</div> 
+		<div id="content">
+			<div id="top">
+				<div id="top-fig">
+					<img src="../Children.jpg" title="Autumn">
+					<div class="top-fig-l"></div>
+					<div class="top-fig-r"></div>
+				</div>
+				<div id="aside">
+					<hr>
+					<h2>
+						<p>About</p>
+						<p>Technology</p>
+					</h2>
+					<span><p>About technology About technology About technology About technology</p></span>
+					<p>223</p>
+					<div class="down">
+						<p class="mark1">3.2</p>
+						<p class="mark2">CSS</p>
+						<p class="mark3">csscsscsscss</p>
+					</div>
+				</div>
+			</div>
+			<div id="middle">
+				<div id="what">
+					<h3>What</h3>
+					<p>古筝是世界最古老的乐器之一，是中国第一国乐，称为 “万乐之祖，众乐之尊”。 古筝又名“秦筝”，中国传统民族乐器之一,分布甚广。筝因施弦紧张，发声“筝筝然”而得名，其发音清脆悦耳，如泉流畅。按五声音定弦，极具中国民族特色。长期以来，人们一直以演奏古筝，作为修身怡情、培养高洁气质的主要方式。古筝是第一件走向世界的中国民族乐器，今天已成为世界不同民族共同的文明艺术财富，随着中小学校素质教育的提出，音乐艺术的广泛普及，这门古老文明的艺术在当代焕发着勃勃生机。而且，古筝表现力强，用于独奏、重奏、器乐合奏和歌舞、戏曲、曲艺伴奏。古筝学弹教容易，适合各年龄层人士学习。</p>
+				</div>
+				<div id="when">
+					<h3>When</h3>
+					<p>古筝始于秦朝，又被称为秦筝，距今已有3500多年的历史。鼎盛于唐朝，为十三弦，传入日本。九大流派各领风骚，北有真秦之声陕西筝、朝鲜伽倻琴（延边筝）、内蒙筝（雅托噶）、山东筝、河南筝，南有潮州筝、客家筝、浙江筝、福建筝。</p>
+				</div>
+				<div id="how">
+					<h3>How</h3>
+					<p>古筝的摇指是要有耐力，首先，手型是做一个OK的姿势，食指大概放在大指指尖到小关节中间的地方，其他3根手指要自然的弯曲（不能夹紧，自然的收一收就好了）。先慢，要有颗粒声，不能用指甲的侧面去摇，那样会有很大的杂音，要用指尖去弹奏，练熟了，再慢慢加快速度，从3分钟一直加到30分钟，中间不能间断，然后停下来，休息一下，甩甩手，再来摇。绝对感觉不一样。先只摇一根弦，无限反复，等有进步了，再走旋律。</p>
+				</div>
+			</div>
+			<div id="bottom">
+				<div id="bottom-left" class="col-xs-6 col-sm-6">
+					<div class="left-title">
+						<p class="English"><span>The</span> Technology of Front</p>
+						<p class="Chinese">前端技术领域</p>
+						<hr class="underline">
+						<p class="text"><span>筝</span>是世界最古老的乐器之一，是中国第一国乐，称为“万乐之祖，众乐之尊”。古筝又名“秦筝”，中国传统民族乐器之一,分布甚广。筝因施弦紧张，发声“筝筝然”而得名，其发音清脆悦耳，如泉流畅。按五声音定弦，极具中国民族特色。长期以来，人们一直以演奏古筝，作为修身怡情、培养高洁气质的主要方式。古筝是第一件走向世界的中国民族乐器，今天已成为世界不同民族共同的文明艺术财富，随着中小学校素质教育的提出，音乐艺术的广泛普及，这门古老文明的艺术在当代焕发着勃勃生机。而且，古筝表现力强，用于独奏、重奏、器乐合奏和歌舞、戏曲、曲艺伴奏。古筝学弹教容易，适合各年龄层人士学习。<br><img src="../zither.jpg" style="float:right" ;="">          <!-- 设置图文环绕 -->古筝音色清越、高洁、典雅、委婉动听、富有神韵。轻拂宛如行云流水, 重扫势若山崩涛啸。左手的吟, 揉, 按, 滑, 点等手法, 充分体现出筝韵的特点！学习弹奏古筝，需要九个手指各自独立灵敏活动，因此左右手能得到均衡的，高度独立的训练。这样不仅可以矫正弊端，而且能使大脑左右半球的技能获得同等的发展并增进相互协调关系。古筝，用行云流水般的音符阐释浪漫情怀。完美的音效、精彩的演奏，带给人们沉醉的音乐享受。<br>陕西筝：陕西地区是中国筝的发源地，但眼下“真秦之声”的筝乐却几乎近于绝响，这里有丰富多彩的戏曲和民间音乐，其间传统的惯用乐器均不为少，但唯独无筝或极少用筝；只有在榆林地区才用筝作为伴奏乐器，跟洋琴、琵琶、三弦一起在榆林小曲的伴奏中出现。著名秦筝理论家、教育家曹正先生说，这就是“秦筝的余绪”。筝在榆林虽有三百多年的历史，但榆林地处偏僻，文化比较落后，筝的技艺还停留在古法弹奏上，右手主要用大食两指，左手滑颤音很少，这正是筝的最早奏法。筝在陕西地区已渐渐失传，其传谱传人都无资料可寻。</p>
+					</div>
+				</div>
+				<div id="bottom-fig" class="col-xs-6 col-sm-6">
+					<img src="../Playing.jpg">
+					<div class="mark">
+						<p class="describe">
+							<span class="des_one">筝情筝意</span><span class="des_two">&nbsp;&nbsp;余味绵长</span>              <!-- <p>不能嵌套啊亲！ -->     
+						</p>
+					</div>
+				</div>
+				<div id="bottom-right" class="col-xs-6 col-sm-6">    <!-- 使用了bootstrap网格系统动态调整 -->
+					<p><span class="triangle">天对地，雨对风</span><span class="words">大陆对长空</span>
+					<br><span class="triangle">山明水净夜来霜</span><span class="words">数树深红出浅黄</span>
+					<br><span class="triangle">一线秋风一线凉</span><span class="words">花间凝露可成霜</span></p>
+					<div class="rectangle">
+						<span>0</span>
+						<div class="line">
+							<p class="bigger">&nbsp;One Two <br>&nbsp;Three Four</p>
+							<p>&nbsp;hello world hello world </p>
+						</div>
+					</div>
+					<div class="verse">
+						<span class="mark_one">“</span>
+						<p>
+							万事从来风过耳，不入心中半点愁。<br>
+							惟将终夜长开眼，报答平生未展眉。<br>
+							舞低杨柳楼心月，歌尽桃花扇底风。<br>
+							莫笑贫贱夸富贵，共成枯骨两何如？<br><br>
+							今儿就到这儿吧~
+						</p>
+						<span class="mark_two">”</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<span class="info">Created by 小楠酱~~</span>
+		</div>
+	</div>
+
+</body></html>
